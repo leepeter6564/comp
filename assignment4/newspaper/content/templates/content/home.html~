@@ -1,12 +1,12 @@
-{% load staticfiles %}
+ {% load staticfiles %}
 
-<link rel='stylesheet" type="text/css" href="{% static 'content/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'content/style.css' %}" />
 
 <h1> ARTICLES </h1>
 {% if all_articles %}
     {% for article in all_articles %}
     <ul>
-        <h2> <a href="{% url 'article' article.id %}">{{ article.title }} </a></h2>
+        <a href="{% url 'article' article.id %}">{{ article.title }} </a>
         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ article.subtitle }}
     </ul>
     {% endfor %}
