@@ -1,0 +1,30 @@
+<h1> ARTICLES </h1>
+{% if all_articles %}
+    {% for article in all_articles %}
+    <ul>
+        <h2> <a href="{% url 'article' article.id %}">{{ article.title }} </a></h2>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ article.subtitle }}
+    </ul>
+    {% endfor %}
+{% else %}
+    <p>No articles are available :'(</p>
+{% endif %}
+
+<h1> IMAGES </h1>
+
+{% if all_images %}
+    {% for image in all_images %}
+    <ul>
+        <img src={{ image.path }} width="500">
+        <li>Title: {{ image.title }}
+        <li>Caption: {{ image.subtitle }}
+        {% for photographer in image.contributors.all %}
+        <li>By: {{ photographer }}
+        {% endfor %}
+        <li>Published: {{ image.pub_date }}
+    </ul>
+    {% endfor %}
+{% else %}
+    <p>No images are available :'( </p>
+{% endif %}
+
