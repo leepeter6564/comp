@@ -1,0 +1,6 @@
+Homepage URL: http://localhost:8000/home/
+Look at me in the eye and tell me that it's not  beautiful.
+
+URL of articles: http://localhost:8000/home/article/<pk> where pk is basically the article id.
+
+Field added: postscript in the Article model and nick_name in Contributor.

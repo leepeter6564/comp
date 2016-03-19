@@ -19,6 +19,8 @@ class Article(Content):
 class Image(Content):
     # setting up relative path in django looked terrible, so I just used
     # absolute url pathing for images :/
+
+    # UPDATE: nevermind, I figured out how to do it lol
     path = models.CharField(max_length=500)
 
     def __str__(self):
