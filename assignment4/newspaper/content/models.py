@@ -11,6 +11,7 @@ class Content(models.Model):
 
 class Article(Content):
     text = tinymce_models.HTMLField()
+    post_script = tinymce_models.HTMLField(default='')
     
     def __str__(self):
         return self.title
@@ -27,6 +28,7 @@ class Image(Content):
 class Contributor(models.Model):
     first_name = models.CharField(max_length=500)
     last_name = models.CharField(max_length=500)
+    nick_name = models.CharField(max_length=100, default='')
 
 
     def __str__(self):

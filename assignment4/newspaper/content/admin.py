@@ -7,7 +7,7 @@ class ArticleAdmin(admin.ModelAdmin):
     ('Title/Subtitle Information', {'fields': ['title', 'subtitle']}),
     ('Publication Date', {'fields': ['pub_date']}),
     ('Writer', {'fields': ['contributors']}),
-    ('Content', {'fields': ['text']}),
+    ('Content', {'fields': ['text', 'post_script']}),
     ]
     list_display = ('title', 'pub_date')
 
