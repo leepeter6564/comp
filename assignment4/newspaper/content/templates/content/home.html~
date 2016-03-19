@@ -1,3 +1,7 @@
+{% load staticfiles %}
+
+<link rel='stylesheet" type="text/css" href="{% static 'content/style.css' %}" />
+
 <h1> ARTICLES </h1>
 {% if all_articles %}
     {% for article in all_articles %}
@@ -15,9 +19,9 @@
 {% if all_images %}
     {% for image in all_images %}
     <ul>
+        <h2>{{ image.title }}</h2>
         <img src={{ image.path }} width="500">
-        <li>Title: {{ image.title }}
-        <li>Caption: {{ image.subtitle }}
+        <li>{{ image.subtitle }}
         {% for photographer in image.contributors.all %}
         <li>By: {{ photographer }}
         {% endfor %}
