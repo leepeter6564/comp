@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'content/style.css' %}" />
 
-<h1> ARTICLES </h1>
+<center><h1> ARTICLES </h1></center>
 {% if all_articles %}
     {% for article in all_articles %}
     <ul>
@@ -14,7 +14,7 @@
     <p>No articles are available :'(</p>
 {% endif %}
 
-<h1> IMAGES </h1>
+<center><h1> IMAGES </h1></center>
 
 {% if all_images %}
     {% for image in all_images %}

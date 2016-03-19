@@ -2,11 +2,11 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'content/style.css' %}" />
 
-<h1> ARTICLES </h1>
+<center><h1> ARTICLES </h1></center>
 {% if all_articles %}
     {% for article in all_articles %}
     <ul>
-        <a href="{% url 'article' article.id %}">{{ article.title }} </a>
+        <h2><a href="{% url 'article' article.id %}">{{ article.title }} </a></h2>
         <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ article.subtitle }}
     </ul>
     {% endfor %}
